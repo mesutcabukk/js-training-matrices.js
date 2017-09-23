@@ -5,11 +5,31 @@
 
 "use strict";
 
-function add(mx) {}
+function add(matrix1, matrix2) {
+ var result = [];  
+    result = new Array(matrix1.length);
+    for ( var i = 0; i < result.length; i++ ){
+        result [i] = new Array ( matrix1[i].length );
+        for (var k = 0; k < result[i].length; k++) {
+            result [i][k] = matrix1[i][k] + matrix2[i][k];
+        }
+    }
+    return result;
+}
 
-function substract(mx) {}
+function substract(matrix1, matrix2) {
+    var result = [];  
+    result = new Array(matrix1.length);
+    for ( var i = 0; i < result.length; i++ ){
+        result [i] = new Array ( matrix1[i].length );
+        for (var k = 0; k < result[i].length; k++) {
+            result [i][k] = matrix1[i][k] - matrix2[i][k];
+        }
+    }
+    return result;
+}
 
-function multiply(mx) {
+function multiply(matrix1, matrix2) {
     var result = new Array(matrix1.length);
     for (var i = 0; i < result.length; i++) {
         result[i] = new Array(matrix2[i].length);
